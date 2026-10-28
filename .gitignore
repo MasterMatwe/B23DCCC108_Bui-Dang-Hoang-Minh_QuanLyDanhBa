@@ -1,0 +1,15 @@
+# Generated build output and local caches in all modules
+**/build/
+**/.gradle/
+**/.kotlin/
+
+# Android Studio settings and machine-specific SDK paths
+**/.idea/
+*.iml
+local.properties
+
+# Native build output and local captures
+**/.externalNativeBuild/
+**/.cxx/
+/captures/
+.DS_Store

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" android:paddingHorizontal="24dp" android:paddingVertical="16dp">
+        <Button style="@style/BackButton" android:id="@+id/back_button" android:text="@string/symbol_back" android:contentDescription="@string/back"/>
+        <TextView style="@style/ScreenTitle" android:layout_width="0dp" android:layout_weight="1" android:text="@string/detail_title" android:textSize="22sp" android:layout_marginStart="16dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/stroke" android:layout_marginHorizontal="24dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="24dp" android:paddingBottom="24dp" android:focusableInTouchMode="true">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" android:layout_marginTop="28dp" android:layout_marginBottom="28dp">
+                <TextView style="@style/Avatar" android:id="@+id/detail_avatar" android:layout_width="80dp" android:layout_height="80dp" android:textSize="34sp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="20dp">
+                    <TextView style="@style/ScreenTitle" android:id="@+id/detail_name" android:textSize="26sp"/>
+                    <TextView style="@style/BodyText" android:id="@+id/detail_phone" android:textSize="17sp" android:textColor="@color/primary_text" android:layout_marginTop="8dp" android:textIsSelectable="true"/>
+                </LinearLayout>
+            </LinearLayout>
+            <Button style="@style/PrimaryButton" android:id="@+id/dial_button" android:text="@string/dial" android:drawableStart="@drawable/ic_phone" android:drawablePadding="12dp"/>
+            <TextView style="@style/SectionLabel" android:text="@string/contact_info" android:layout_marginTop="28dp" android:layout_marginBottom="14dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_card" android:padding="18dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" android:paddingVertical="8dp">
+                    <TextView style="@style/BodyText" android:text="@string/group_label" android:layout_width="0dp" android:layout_weight="1"/>
+                    <TextView style="@style/BodyText" android:id="@+id/detail_group" android:layout_width="0dp" android:layout_weight="1" android:gravity="end" android:textSize="16sp" android:textColor="@color/ink"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/stroke" android:layout_marginVertical="12dp"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" android:paddingVertical="8dp">
+                    <TextView style="@style/BodyText" android:text="@string/gender_label" android:layout_width="0dp" android:layout_weight="1"/>
+                    <TextView style="@style/BodyText" android:id="@+id/detail_gender" android:layout_width="0dp" android:layout_weight="1" android:gravity="end" android:textSize="16sp" android:textColor="@color/ink"/>
+                </LinearLayout>
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/stroke" android:layout_marginVertical="12dp"/>
+                <CheckBox android:id="@+id/detail_favorite" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:text="@string/favorites" android:textColor="@color/primary_text"/>
+            </LinearLayout>
+            <TextView style="@style/SectionLabel" android:text="@string/note_label" android:layout_marginTop="28dp" android:layout_marginBottom="14dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_card" android:padding="18dp">
+                <TextView style="@style/BodyText" android:id="@+id/detail_note" android:textColor="@color/ink" android:textSize="16sp" android:minHeight="56dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false" android:gravity="center_vertical" android:paddingHorizontal="24dp" android:paddingVertical="16dp">
+        <Button style="@style/SecondaryButton" android:id="@+id/return_button" android:layout_width="0dp" android:layout_weight="1" android:text="@string/back" android:layout_marginEnd="6dp"/>
+        <Button style="@style/PrimaryButton" android:id="@+id/delete_button" android:layout_width="0dp" android:layout_weight="1" android:text="@string/delete_contact" android:textColor="@color/danger" android:background="@drawable/bg_delete" android:layout_marginStart="6dp"/>
+    </LinearLayout>
+</LinearLayout>

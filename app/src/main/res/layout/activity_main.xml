@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/screen_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <TextView style="@style/SectionLabel" android:text="@string/brand"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false" android:layout_marginTop="14dp">
+            <TextView style="@style/ScreenTitle" android:layout_width="0dp" android:layout_weight="1" android:text="@string/main_title" android:layout_marginEnd="12dp"/>
+            <Button style="@style/PrimaryButton" android:id="@+id/add_contact_button" android:layout_width="52dp" android:layout_height="52dp" android:minWidth="0dp" android:minHeight="0dp" android:padding="0dp" android:text="@string/symbol_add" android:textSize="28sp" android:contentDescription="@string/add_contact"/>
+        </LinearLayout>
+        <TextView style="@style/BodyText" android:text="@string/main_subtitle" android:layout_marginTop="6dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false" android:layout_marginTop="28dp">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_card" android:padding="16dp" android:layout_marginEnd="6dp">
+                <TextView style="@style/ScreenTitle" android:id="@+id/total_count" android:layout_width="wrap_content" android:textSize="30sp" android:textColor="@color/primary_text"/>
+                <TextView style="@style/BodyText" android:layout_width="0dp" android:layout_weight="1" android:text="@string/total_contacts" android:textSize="12sp" android:layout_marginStart="12dp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_card" android:padding="16dp" android:layout_marginStart="6dp">
+                <TextView style="@style/ScreenTitle" android:id="@+id/favorite_count" android:layout_width="wrap_content" android:textSize="30sp" android:textColor="@color/primary_text"/>
+                <TextView style="@style/BodyText" android:layout_width="0dp" android:layout_weight="1" android:text="@string/favorites" android:textSize="12sp" android:layout_marginStart="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView style="@style/SectionLabel" android:text="@string/all_contacts" android:layout_marginTop="30dp"/>
+        <TextView style="@style/BodyText" android:text="@string/list_hint" android:textSize="12sp" android:layout_marginTop="6dp"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/stroke" android:layout_marginHorizontal="24dp"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginHorizontal="16dp" android:layout_marginBottom="12dp">
+        <ListView android:id="@+id/contact_list" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@color/stroke" android:dividerHeight="1dp" android:paddingHorizontal="8dp" android:clipToPadding="false" android:scrollbarStyle="outsideOverlay"/>
+        <LinearLayout android:id="@+id/empty_state" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="20dp" android:visibility="gone">
+            <TextView style="@style/ScreenTitle" android:text="@string/empty_title" android:textSize="20sp" android:gravity="center"/>
+            <TextView style="@style/BodyText" android:text="@string/empty_hint" android:gravity="center" android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
